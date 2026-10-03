@@ -42,22 +42,8 @@ local function getZoneName(square)
     pcall(function()
         local room = square:getRoom()
         if room then
-            local rd = room:getDef()
-            if rd then
-                local n = rd:getName()
-                if n and n ~= "" then result = n end
-            end
-        end
-    end)
-    if result ~= "Open" then return result end
-    pcall(function()
-        local building = square:getBuilding()
-        if building then
-            local bd = building:getDef()
-            if bd then
-                local n = bd:getName()
-                if n and n ~= "" then result = n end
-            end
+            local n = room:getName()
+            if n and n ~= "" then result = n else result = "Building" end
         end
     end)
     return result
