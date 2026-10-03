@@ -1,0 +1,15 @@
+module Base
+{
+    item STU3Terminal
+    {
+        DisplayName         = STU-III Secure Terminal,
+        Type                = Normal,
+        Weight              = 1.5,
+        Icon                = STU3Terminal,
+        DisplayCategory     = Electronics,
+        Tooltip             = Tooltip_PSC_STU3Terminal,
+        CanBeEquipped       = BothHands,
+        AttachmentType      = Walkie,
+        /*  No crafting recipe — world loot only  */
+    }
+}
